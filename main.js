@@ -2,7 +2,6 @@ const express=require('express')
 const app=express()
 const port=4000
 const path = require('path')
-// const http = require('http').createServer(app)
 const bodyParser = require('body-parser')
 const router=require('./router/create_router')
 
@@ -19,13 +18,6 @@ const pages = path.join(__dirname,"./FrontEnd/page")    // html file path
 app.use(express.static(csspath))
 app.set("pages",pages)
 
-// app.get('/', (req, res) => {
-//     res.render('like-dislike');
-// });
-
 app.listen(port,()=>{
     console.log(`this server is runing on ${port}`);
 })
-
-// ===============
-// app.use(express.static(__dirname+"/public"))
