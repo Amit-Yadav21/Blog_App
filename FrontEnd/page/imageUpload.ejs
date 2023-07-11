@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Upload Iamage</title>
+  <link rel="stylesheet" href="imageUpload.css">
+</head>
+<body>
+    <div class="mainbox">
+        <h1>Upload Image</h1>        
+        <% if (error) { %>
+          <p><%= error %></p>
+        <% } %>
+        
+        <form method="POST" action="/uploadImageFile" enctype="multipart/form-data">
+          <div class="inputbox">
+              <label for="image" class="lbl">Image:</label>
+              <input type="file" id="image" name="image" required>
+          </div>
+          <div>
+            <label for="name" class="lbl">Title:</label>
+            <textarea name="titale" type="text" cols="60" rows="8" placeholder="Please enter your titale"></textarea>
+            <!-- <input type="text" name="titale" placeholder="Please enter your titale"> -->
+          </div>
+          <div class="loginbtn">
+              <button type="submit" class="btn">Add Post</button>              
+              <a href="http://localhost:4000/register">register</a>
+          </div>
+          
+        </form>
+    </div>
+</body>
+</html>

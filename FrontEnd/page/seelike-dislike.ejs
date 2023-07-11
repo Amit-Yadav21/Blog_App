@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Student Images</title>
+  <link rel="stylesheet" href="seelike-dislike.css">
+</head>
+<body>
+    <h1>See like dislike</h1>
+    <table>
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>User ID</th>
+          <th>postid</th>
+          <th>Like</th>
+          <th>DisLike</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% posts.forEach(function(post) { %>
+          <tr>
+            <td><%= post.id %></td>
+            <td><%= post.userId %></td>
+            <td><%= post.postid %></td>
+            <td><%= post.Like %></td>
+            <td><%= post.DisLike %></td>
+          </tr>
+        <% }); %>
+      </tbody>
+    </table>
+    
+</body>

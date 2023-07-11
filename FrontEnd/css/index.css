@@ -1,0 +1,50 @@
+body {
+    display: flex;
+    align-items: center;
+    background-color: rgb(254, 246, 246);
+}
+
+.main {
+    width: 30%;
+    margin: auto;
+    text-align: center;
+    border-top-right-radius: 25px;
+    border-bottom-left-radius: 25px;
+    box-shadow: 1px 1px 5px 5px rgba(0, 0, 0, 0.2);
+    background-color: #f7f3f3;
+
+}
+
+input[type=file] {
+    border: 2px solid grey;
+
+}
+
+input {
+    margin-top: 20px;
+    width: 80%;
+    font-size: 18px;
+    padding: 8px;
+    border: 2px solid grey;
+    border-radius: 10px;
+
+}
+
+.button {
+    width: 80%;
+    margin: auto;
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+
+}
+
+button,
+a {
+    padding: 7px;
+    width: 50%;
+    font-size: 18px;
+    border-radius: 10px;
+    border: 2px solid grey;
+    margin-bottom: 10px;
+}

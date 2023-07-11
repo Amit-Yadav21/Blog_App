@@ -1,0 +1,25 @@
+<html>
+<head>
+  <title>User Registration</title>
+  <link rel="stylesheet" href="createPost.css">
+</head>
+<body>
+  <div class="main">
+    <h1>Create Post</h1>
+    <form action="/createPost" method="POST" enctype="multipart/form-data">
+        <div>
+          <input type="file" name="image" placeholder="update image">
+        </div>
+      <div>
+        <input type="text" name="name" placeholder="Please enter titale">
+      </div>
+
+      <div class="button">
+
+        <button type="submit">Post</button>
+         <a href="http://localhost:4000/login">login</a>
+      </div>
+    </form>
+  </div>
+</body>
+</html>

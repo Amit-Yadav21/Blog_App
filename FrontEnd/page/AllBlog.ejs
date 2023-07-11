@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>All Blog</title>
+  <link rel="stylesheet" href="AllBlog.css">
+</head>
+<body>
+    <div class="anchorbox">
+      
+        <a class="signup-btn" class="ancor" href="http://localhost:4000/homepage">Home page</a>
+        <a class="signup-btn" href="http://localhost:4000/register">Register Page</a>
+        <a class="signup-btn" href="http://localhost:4000/login">login Page</a>
+        <a class="signup-btn" href="http://localhost:4000/logout">log-out</a>
+        <a class="signup-btn" href="http://localhost:4000/uploadImageFile">Add Blog</a>
+        <a class="signup-btn" href="http://localhost:4000/updatedata">Update Profile</a>
+        <a class="signup-btn" href="http://localhost:4000/readData">Show User Data</a>
+        <a class="signup-btn" href="http://localhost:4000/likedislike">Like/Dislike</a>
+        <a class="signup-btn" href="http://localhost:4000/seelikeDislike">See like dislike</a>
+        <a class="signup-btn" href="http://localhost:4000/chatpage">Chating</a>
+
+    </div>
+ 
+    <h1>All Blog Posts</h1>
+    <table>
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>User ID</th>
+          <th>Title</th>
+          <th>Post</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% posts.forEach(function(post) { %>
+          <tr>
+            <td><%= post.id %></td>
+            <td><%= post.userId %></td>
+            <td><%= post.titale %></td>
+            <td>
+              <% if (post.UserPost) { %>
+                <% if (post.UserPost.endsWith('.jpg') || post.UserPost.endsWith('.jpeg') || post.UserPost.endsWith('.png') || post.UserPost.endsWith('.gif')) { %>
+                  <img src="<%= post.UserPost %>" alt="Image">
+                <% } else if (post.UserPost.endsWith('.pdf')) { %>
+                  <embed src="<%= post.UserPost %>" type="application/pdf" width="100%" height="500px" />
+                <% } else { %>
+                  <p>File type not supported.</p>
+                <% } %>
+              <% } %>
+            </td>
+          </tr>
+        <% }); %>
+      </tbody>
+    </table>
+    
+</body>
+    
+

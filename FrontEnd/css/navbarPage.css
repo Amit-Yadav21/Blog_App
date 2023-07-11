@@ -1,0 +1,147 @@
+* {
+    margin: 0px;
+}
+
+.navbar {
+    height: 70px;
+    background-color: #19708a;
+}
+
+.navbar ul {
+    display: flex;
+}
+
+.box1 {
+    display: flex;
+    justify-content: space-between;
+    width: 48%;
+    position: absolute;
+    right: 30px;
+    top: 10;
+    box-sizing: border-box;
+    height: 70px;
+}
+
+.box1 .profileImagebox li {
+    width: 50px;
+    height: 50px;
+    margin-top: 8px;
+    border-radius: 25px;
+
+}
+
+.box1 .profileImagebox li img {
+    width: 100%;
+    height: 50px;
+    border-radius: 25px;
+
+}
+
+.box1 .libox {
+    display: flex;
+    align-items: center;
+    box-sizing: border-box;
+    width: 100%;
+    line-height: 70px;
+}
+
+.navbar li {
+    margin-left: 30px;
+    list-style: none;
+    color: black;
+}
+
+.navbar li a {
+    color: rgb(61, 53, 53);
+}
+
+h2 {
+    margin-top: 25%;
+
+}
+
+.libox .signup-btn {
+    border: 1px solid grey;
+    padding: 8px;
+    text-decoration: none;
+    background-color: yellow;
+    font-size: 18px;
+}
+
+.libox .signup-btn:hover {
+    border: 1px solid grey;
+    background-color: rgb(14, 220, 243);
+}
+
+.profile {
+    width: 44px;
+}
+
+.table {
+    width: 50%;
+    border-collapse: collapse;
+    border: 2px solid grey;
+    position: relative;
+    top: 70px;
+    margin: auto;
+}
+
+th,
+td {
+    padding: 4px;
+    border-bottom: 2px solid #ddd;
+}
+
+td {
+    text-align: center;
+    border: 2px solid grey;
+}
+
+tr th {
+    padding: 10px;
+    font-size: 25px;
+    border: 2px solid grey;
+}
+
+td img,
+embed {
+    width: 100px;
+    height: auto;
+    margin: 20px;
+}
+
+td,
+embed {
+    margin: 20px;
+}
+
+h1 {
+    text-align: center;
+}
+
+;
+
+.anc {
+    width: 700px;
+
+    height: auto;
+    font-size: 30px;
+}
+
+a {
+    width: 100px;
+    height: auto;
+    padding: 5px;
+    margin-top: 10px;
+    background-color: rgb(42, 225, 249);
+    color: black;
+}
+
+tr td {
+    background-color: #dddddd;
+    border: 2px solid grey;
+}
+
+p {
+    color: black;
+}

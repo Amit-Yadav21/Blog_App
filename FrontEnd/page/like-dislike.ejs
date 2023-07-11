@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Like and Dislike</title>
+  <link rel="stylesheet" href="link-dislink.css">
+  <!-- <style>
+    .message {
+      margin-top: 10px;
+      font-weight: bold;
+    }
+    .maindiv{
+        width: 30%;
+        text-align: center;
+        margin: auto;
+        background-color: #dcdaef;
+        padding: 20px;
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+        margin-top: 30px;
+    }
+    .likeBox{
+        padding: 10px;
+        margin-bottom: 40px;
+    }
+    .dislikebox{
+        padding: 10px;
+        line-height: 100%;
+    }
+    input{
+        font-size: 20px;
+        padding: 5px;
+        width: 20%;
+    }
+    label{
+        font-size: 25px;
+    }
+    button{
+        padding: 5px;
+        font-size: 18px;
+        position: relative;
+        top: -2px;
+        background-color:yellow;
+        border: 1px solid grey;
+    }
+    button:hover{
+        background-color: #07bbdf;
+    }
+    h2{
+        margin-bottom: 0px;
+    }
+  </style> -->
+</head>
+<body>
+    <div class="maindiv">
+
+        <h1>Like and Dislike</h1>
+        
+        <h2>Like a Post</h2>
+        <div class="likeBox">
+            <label for="like-post-id">Post ID:</label>
+            <input type="text" id="like-post-id">
+            <button onclick="likePost()">Like</button>
+        </div>
+        <div id="like-message" class="message"></div>
+
+        <h2>Dislike a Post</h2>
+        <div class="dislikebox">
+            <label for="dislike-post-id">Post ID:</label>
+            <input type="text" id="dislike-post-id">
+            <button onclick="dislikePost()">Dislike</button>
+        </div>
+        <div id="dislike-message" class="message"></div>
+    
+    </div>
+    <script>
+    async function likePost() {
+        try {
+            const postId = document.getElementById('like-post-id').value;
+            const data = { postId };
+
+            const response = await fetch('/posts/like', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(data)
+            });
+
+            const result = await response.json();
+            document.getElementById('like-message').textContent = result.message;
+        } catch (error) {
+            console.error(error);
+            document.getElementById('like-message').textContent = 'An error occurred while liking the post.';
+        }
+    }
+
+    async function dislikePost() {
+        try {
+            const postId = document.getElementById('dislike-post-id').value;
+            const data = { postId };
+
+            const response = await fetch('/posts/dislike', {
+                method: 'POST',
+                headers: {
+                'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(data)
+            });
+
+            const result = await response.json();
+            document.getElementById('dislike-message').textContent = result.message;
+        } catch (error) {
+            console.error(error);
+            document.getElementById('dislike-message').textContent = 'An error occurred while disliking the post.';
+        }
+    }
+
+  </script>
+</body>
+</html>

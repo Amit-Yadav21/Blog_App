@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Login</title>
+  <link rel="stylesheet" href="loginPage.css">
+  <!-- <style>
+ body{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: rgb(254, 246, 246);
+    }
+    .mainbox{
+      width: 30%;
+      margin: auto;
+      margin-top: 100px;
+      text-align: center;
+      border-top-right-radius: 25px;
+      border-bottom-left-radius: 25px;
+      box-shadow: 1px 1px 5px 5px rgba(0, 0, 0, 0.2);
+      background-color: #f7f3f3;
+
+    }
+    form{
+        width: 80%;
+        margin: auto;
+        margin-bottom: 20px;
+    }
+    input{
+        box-sizing: border-box;
+        width: 100%;
+        font-size: 18px;
+        padding: 7px;
+        border-radius: 10px;
+    }
+    label{
+        font-size: 25px;
+    }
+    .loginbtn{
+      width: 100%;
+      margin: auto;
+      margin-top: 25px;
+      display: flex;
+      justify-content: space-between;
+
+    }
+    button, a{
+      padding: 7px;
+      width: 50%;
+      font-size: 18px;
+      border-radius: 10px;
+      border: 2px solid grey;
+      margin-bottom: 10px;
+      background-color: rgb(213, 235, 237)
+      ;
+    }
+    .inputbox{
+        margin-bottom: 15px;
+    }
+  </style> -->
+</head>
+<body>
+    <div class="mainbox">
+        <h1>Login</h1>
+        
+        <% if (error) { %>
+          <p><%= error %></p>
+        <% } %>
+        
+        <form method="POST" action="/login">
+          <div class="inputbox">
+              <label for="email" class="lbl">Email:</label>
+              <input type="email" id="gmail" name="gmail" required>
+          </div>
+          <div class="inputbox">
+              <label for="password" class="lbl">Password:</label>
+              <input type="password" id="password" name="password" required>
+          </div>
+          <div class="loginbtn">
+              <button type="submit" class="btn">Login</button>
+              
+              <a href="http://localhost:4000/register">register</a>
+
+          </div>
+          
+        </form>
+    </div>
+</body>
+</html>

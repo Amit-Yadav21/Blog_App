@@ -1,0 +1,80 @@
+* {
+    margin: 0px;
+}
+
+table {
+    width: 90%;
+    margin: auto;
+    border-collapse: collapse;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+tr th {
+    font-size: 20px;
+}
+
+th,
+td {
+    padding: 4px;
+    border-bottom: 2px solid #ddd;
+}
+
+td {
+    text-align: center;
+    margin-left: 100px;
+}
+
+td img {
+    width: 100px;
+    height: auto;
+    margin: 20px;
+
+}
+
+td,
+embed {
+    margin: 20px;
+    width: 100px;
+    height: 110px;
+}
+
+h1 {
+    text-align: center;
+}
+
+.anchorbox {
+    line-height: 70px;
+    background-color: #19708a;
+    text-align: center;
+
+}
+
+.signup-btn {
+    border: 1px solid grey;
+    padding: 8px;
+    text-decoration: none;
+    background-color: yellow;
+    font-size: 18px;
+    box-sizing: border-box;
+}
+
+.signup-btn:hover {
+    border: 1px solid grey;
+    background-color: rgb(14, 220, 243);
+}
+
+tr th {
+    padding: 10px;
+    font-size: 25px;
+    border: 2px solid grey;
+}
+
+td {
+    text-align: center;
+    border: 2px solid grey;
+}
+
+tr:nth-child(even) {
+    background-color: #dddddd;
+}
