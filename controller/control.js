@@ -36,7 +36,7 @@ const likeDislike = (req, res) => {
 }
 
 
-// ============================================== Backent 
+// =========================================================== Backend part here
 // -------------------------------------------- signup user
 const createUser = async (req, res, next) => {
   try {
@@ -110,7 +110,6 @@ const read_all_data = async (req, res, next) => {
     const posts = await knex.select().from('blogPosts');
     console.log('post', posts);
     res.render('../FrontEnd/page/AllBlog.ejs', { posts: posts });
-
   } catch (error) {
     console.log(error);
     res.send('Data not found...');
@@ -214,14 +213,11 @@ const createUserPost = (req, res) => {
 // ------------------------------------------delete login user data
 const deleteuserdata = async (req, res) => {
   try {
-    console.log('aniket tiwari');
     const id = req.id__ // find id with jwt logn user data
-    console.log('================', id);
     let rows = await knex('student').where({ id: id });
     if (rows.length > 0) {
       const data = await knex('student').where({ id: id }).del(id)
       res.send({ info: 'data delete successfuly....', "this is your data": rows })
-      console.log('+++++++++++++++++++++++', data);
     } else {
       res.send({ message: 'sorry data not found.....', info: 'login first' })
     }
@@ -249,10 +245,7 @@ const deletedata = async (req, res) => {
 
         const condition = { id: id }; // Specify the condition to identify the row you want to update
         await knex('student').where(condition).update(updateData);
-
         res.send({ info: `Deleted ${columnName} successfully`, });
-
-
       } else {
         res.send({ message: 'Invalid column name or column not found' });
       }
@@ -280,11 +273,10 @@ const delete_all_data = async (req, res) => {
 const Logout = async (req, res) => {
   try {
     let id = req.id__
-    console.log(id, '============');
     let userdata = await knex('student').where({ id });
     if (userdata.length > 0) {
       res.clearCookie('cookie')
-      res.send("logout succefully")
+      res.send("logout succefully...")
 
     } else {
       res.send('login first')
