@@ -45,7 +45,7 @@ router.get('/uploadImageFile',routers.profileImage);
 // this router for home page
 router.get('/homepage',routers.homepage)
 
-// this router for create post here
+// this router for create post 
 router.get('/createPost',routers.createPost)
 router.post('createPost',multerFile.product.single('image'),verifyToken,routers.createUserPost)
 
