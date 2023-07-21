@@ -17,7 +17,7 @@ const csspath = path.join(__dirname,"./FrontEnd/css")   // css file path
 const pages = path.join(__dirname,"./FrontEnd/page")    // html file path 
 app.use(express.static(csspath))
 app.set("pages",pages)
-
+// ------------------------------------
 app.listen(port,()=>{
     console.log(`this server is runing on ${port}`);
 })
